@@ -1,0 +1,117 @@
+:root {
+  --background-color-light: #f9f9f9;
+  --background-color-dark: #333;
+  --text-color-light: #333;
+  --text-color-dark: #f9f9f9;
+  --border-color-light: #ddd;
+  --border-color-dark: #444;
+  --box-shadow-light: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --box-shadow-dark: 0 4px 8px rgba(0, 0, 0, 0.5);
+  --button-background-light: #007bff;
+  --button-background-dark: #0056b3;
+  --button-text-light: #fff;
+  --button-text-dark: #fff;
+  --button-border-light: #007bff;
+  --button-border-dark: #0056b3;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Default light mode styles */
+body.light-mode {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+body.light-mode .quote-card {
+  background-color: var(--background-color-light);
+  border: 1px solid var(--border-color-light);
+  box-shadow: var(--box-shadow-light);
+}
+
+body.light-mode .header {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+body.light-mode .toggle-button {
+  background-color: var(--button-background-light);
+  color: var(--button-text-light);
+  border: 1px solid var(--button-border-light);
+}
+
+/* Default dark mode styles */
+body.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+body.dark-mode .quote-card {
+  background-color: var(--background-color-dark);
+  border: 1px solid var(--border-color-dark);
+  box-shadow: var(--box-shadow-dark);
+}
+
+body.dark-mode .header {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+body.dark-mode .toggle-button {
+  background-color: var(--button-background-dark);
+  color: var(--button-text-dark);
+  border: 1px solid var(--button-border-dark);
+}
+
+.quotes-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  padding: 20px;
+}
+
+.quote-card {
+  padding: 15px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.quote-card h1 {
+  font-size: 1.25em;
+  margin-bottom: 10px;
+}
+
+.quote-card p {
+  font-size: 1em;
+}
+
+.App-header {
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.toggle-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 45px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 800px) {
+  .quotes-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .quotes-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    padding: 1em;
+  }
+}
